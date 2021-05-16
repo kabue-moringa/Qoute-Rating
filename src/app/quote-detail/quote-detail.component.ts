@@ -11,11 +11,6 @@ export class QuoteDetailComponent implements OnInit {
 
   @Input()
   quote!: Quote;
-  isComplete: any;
-  // tslint:disable-next-line:typedef
-  quoteDelete(complete: boolean){
-    this.isComplete.emit(complete);
-  }
   constructor() { }
 
   // tslint:disable-next-line:typedef
