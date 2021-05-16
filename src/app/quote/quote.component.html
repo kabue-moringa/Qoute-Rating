@@ -1,0 +1,16 @@
+<div>
+  <h1>My Quote</h1>
+  <hr>
+  <ul>
+    <li *ngFor='let quote of quote'>
+      {{quote.name}}
+
+      <app-quote-detail [quote]='quote'></app-quote-detail>
+      <div id="thumb">
+        <p><i class="fa fa-thumbs-up" aria-hidden="true" style="color: green; font-size: 30px;"></i></p>
+        <p><i class="fa fa-thumbs-down" style = "font-size: 30px; color: red;" aria-hidden="true"></i></p>
+    </div>
+    </li>
+  </ul>
+  <app-quote-form></app-quote-form>
+</div>
