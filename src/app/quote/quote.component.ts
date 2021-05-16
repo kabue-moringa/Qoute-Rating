@@ -15,6 +15,22 @@ export class QuoteComponent implements OnInit {
     new Quote (5, ' Make each day your masterpiece',  'JOHN WOODEN', new Date(2021, 2, 14)),
     new Quote (6, 'Criticism makes you strong', 'LEBRON LAMES', new Date(2021, 9, 14)),
   ];
+  // tslint:disable-next-line:typedef
+  deleteQuote(isComplete, index){
+    if (isComplete) {
+      // tslint:disable-next-line:prefer-const
+      let toDelete = confirm(`Are you sure you want to delete ${this.quote[index].name}?`);
+      if (toDelete){
+        this.quote.splice(index, 1);
+      }
+
+    }
+  }
+  // tslint:disable-next-line:typedef
+  toggleDetails(index){
+    this.quote[index].showDescription = !this.quote[index].showDescription;
+  }
+
   constructor() { }
 
   // tslint:disable-next-line:typedef

@@ -1,5 +1,5 @@
-import { Input } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter} from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,8 +9,12 @@ import { Quote } from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
 
-  @Input()
-  quote!: Quote;
+  @Input()quote!: Quote;
+  @Output() isComplete = new EventEmitter<boolean>();
+  // tslint:disable-next-line:typedef
+  quoteDelete(complete: boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   // tslint:disable-next-line:typedef
