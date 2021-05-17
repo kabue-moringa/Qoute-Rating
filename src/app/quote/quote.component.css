@@ -6,8 +6,29 @@
 .fa-thumbs-down{
 margin-left: 20px;
 }
-*body{
+.workings{
+  padding: 50px;
+  margin: 100px;
+  /* display: flex; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: chartreuse);
+}
+ul{
+  background-color: white;
+  padding-top: 40px;
+  background-size: cover;
 
-  margin: 0px;
+}
+h1{
+  text-align: center;
+}
+.col-md-6{
+  padding: 30px;
+  margin-bottom: 40%;
+  background-size: cover;
+}
+.jose{
+  display: flex;
 }
 
