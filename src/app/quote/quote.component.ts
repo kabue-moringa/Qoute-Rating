@@ -66,6 +66,13 @@ uvote(i: number){
   displayInfo(index){
     this.quote[index].showInfo = !this.quote[index].showInfo;
   }
+  // tslint:disable-next-line:typedef
+  addNewQuote(quote){
+    const  quoteLength = this.quote.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quote.push(quote);
+  }
   constructor() { }
 
   // tslint:disable-next-line:typedef
