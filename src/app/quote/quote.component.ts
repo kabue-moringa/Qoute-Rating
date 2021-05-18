@@ -24,16 +24,20 @@ export class QuoteComponent implements OnInit {
   //   this.quote.push(quote);
   // }
   // tslint:disable-next-line:typedef
-  // addQuote(emittedQuote: Quote){
-  //   this.quote.push(emittedQuote);
-  // }
-  // tslint:disable-next-line:typedef
-  addNewQuote(quote){
-    quote.name = quote.name;
-    quote.id = quote.id;
-    quote.postDate = new Date(quote.completeDate);
-    this.quote.push(quote);
+  addQuote(emittedQuote: Quote){
+    emittedQuote.id = this.quote.length + 1;
+    const quoteDate = new Date(emittedQuote.completeDate);
+    emittedQuote.completeDate = new Date(quoteDate.getFullYear(), quoteDate.getMonth(), quoteDate.getDate());
+    this.quote.push(emittedQuote);
   }
+  // tslint:disable-next-line:typedef
+//   addNewQuote(quote){
+//     quote.name = quote.name;
+//     quote.id = quote.id;
+//     quote.postDate = new Date(quote.completeDate);
+//     this.quote.push(quote);
+//   }
+// // tslint:disable-next-line:typedef
 // tslint:disable-next-line:typedef
 dvote(i: number){
   this.quote[i].dislike += 1;

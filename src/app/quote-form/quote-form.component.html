@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <!-- <h2 class="text-center">Add a new Quote</h2> -->
   <hr>
-  <!-- <form (ngSubmit)='addQuote()' #quoteForm='ngForm'> -->
-   <form>
+  <form (ngSubmit)='addQuote()' #quoteForm='ngForm'>
+   <!-- <form> -->
       <div class="form-group">
         <label for="description">Add your quote</label>
           <textarea class="form-control" id="description" rows="4" required></textarea>
@@ -16,7 +16,6 @@
       <div class="form-group">
           <label for="complete">Submit your Quote</label>
           <input type='date' id="complete" required>
-
 
       </div>
     <div btn>
