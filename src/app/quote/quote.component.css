@@ -12,7 +12,10 @@ margin-left: 20px;
   /* display: flex; */
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: chartreuse;
+  background-image: url(/assets/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 ul{
   background-color: white;
@@ -23,6 +26,7 @@ ul{
 h1{
   text-align: center;
   margin-bottom: 20x;
+  color: white;
 }
 .col-md-6{
   padding: 30px;
@@ -32,4 +36,6 @@ h1{
 .jose{
   display: flex;
 }
-
+h2{
+  color: white;
+}
